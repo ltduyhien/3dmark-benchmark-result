@@ -97,7 +97,6 @@ function App() {
                 <h5 className='margin-clear thin'>{gpuInfo[0].name}</h5>
                 <Space size="medium"/>
                 
-                <Space size="small"/>
                 <div className="inner-grid">
                   <TextBox value='3541' bigSize={true}/>
                 </div>
@@ -106,6 +105,10 @@ function App() {
                   <TextBox  title='GT Test 1' value={`${result.scores.componentScores[0].subScores[1].score.toFixed(1)} fps`}/>
                   <TextBox  title='GT Test 2' value={`${result.scores.componentScores[0].subScores[0].score.toFixed(1)} fps`}/>
                 </div>
+
+                <Space size="medium"/>
+                <TextList title="Average Frequency" value={`${gpuInfo[0].clockSpeed.gpu.averageMhz} Mhz`}/>
+                <TextList title="Average Temperature" value={`${gpuInfo[0].averageTemperature} °C`}/>
               </Card>
             </div>
             <div class="flex-column col-3">
@@ -113,7 +116,7 @@ function App() {
               <h4 className='margin-clear'>CPU Score</h4>
               <Space size="small"/>
               <h5 className='margin-clear thin'>{cpuInfo[0].name}</h5>
-                <Space size="large"/>
+                <Space size="medium"/>
 
                 <div className="inner-grid">
                   <TextBox value='2915' bigSize={true}/>
@@ -122,6 +125,9 @@ function App() {
                 <div className="inner-grid">
                   <TextBox  title='CPU Test Time' value={`${result.scores.componentScores[1].subScores[0].score.toFixed(2)} ms`}/>
                 </div>
+                <Space size="medium"/>
+                <TextList title="Average Frequency" value={`${cpuInfo[0].averageFrequencyMhz} Mhz`}/>
+                <TextList title="Average Temperature" value={`${cpuInfo[0].averageTemperature} °C`}/>
               </Card>
             </div>
           </div>

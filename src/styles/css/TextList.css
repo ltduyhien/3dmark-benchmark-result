@@ -42,7 +42,7 @@
     margin: 0;
     text-align: left; }
   .text-list h6:nth-child(2) {
-    font-weight: 500;
+    font-weight: 00;
     flex-grow: 1;
     text-align: right;
     margin: 0; }
