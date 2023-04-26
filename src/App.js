@@ -10,6 +10,9 @@ import data from './test.json';
 import Button from './components/Button';
 
 function App() {
+  React.useEffect(() => {
+    document.title = '3DMark Benchmark';
+  }, []);
   const maxScore = 3939;
   const result = data.results[0];
   const score = data.results[0].scores.overallScore.score;
