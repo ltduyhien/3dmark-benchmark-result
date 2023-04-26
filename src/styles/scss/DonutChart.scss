@@ -45,15 +45,17 @@
 }
 
 .donut-title {
+    font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
   font-size: 0.17rem;
   font-weight: 400;
   line-height: 1;
-  fill: #000;
+  fill: $color-base;
   transform: translateY(0.25em);
 }
 
 
 .donut-label {
+    font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
     font-size: 0.4rem;
     font-weight: 200;
     line-height: 1;
@@ -62,6 +64,7 @@
 }
 
 .donut-score{
+    font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
     font-size: 0.45rem;
     line-height: 1;
     transform: translateY(0.5em);
@@ -69,11 +72,12 @@
 }
 
 .donut-subtitle {
+    font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
     font-size: 0.18rem;
     line-height: 1;
     transform: translateY(0.5em);
     text-align: center;
     text-anchor: middle;
-    color:#666;
-    fill: #666;
+    color:$color-base;
+    fill: $color-base;
 }

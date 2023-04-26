@@ -10,13 +10,13 @@ function DonutChart ({ percent, text, evalution }){
         <circle className="donut-ring" cx="20" cy="20" r="15.5" fill="transparent" stroke-width="3.5"></circle>
         <circle className="donut-segment" cx="20" cy="20" r="15.5" fill="transparent"  stroke-width="3.5" stroke-dasharray={`${percent} ${100 - percent}`}  stroke-dashoffset="25" strokeLinecap='round'></circle>
         <g class="donut-text">
-          <text y="34%" transform="translate(0, 2)">
+          <text y="32%" transform="translate(0, 2)">
             <tspan x="50%" text-anchor="middle" className="donut-title">Your Score</tspan>   
           </text>
-          <text y="55%" transform="translate(0, 2)">
+          <text y="52%" transform="translate(0, 2)">
             <tspan x="50%" text-anchor="middle" className="donut-score">{text}</tspan>   
           </text>
-          <text y="66%" transform="translate(0, 2)">
+          <text y="64%" transform="translate(0, 2)">
             <tspan x="50%" text-anchor="middle" className="donut-subtitle">{evalution}</tspan>   
           </text>
       </g>

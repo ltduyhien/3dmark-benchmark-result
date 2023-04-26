@@ -32,9 +32,9 @@ function Button({ buttonType, label, onClick }) {
   return (
     <button
       className={buttonClasses}
-      onClick={handleClick}
-      onMouseDown={handleMouseDown}
-      onMouseUp={handleMouseUp}
+      // onClick={handleClick}
+      // onMouseDown={handleMouseDown}
+      // onMouseUp={handleMouseUp}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
