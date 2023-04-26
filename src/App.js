@@ -83,15 +83,15 @@ function App() {
               <Card>
                 <h4 className='margin-clear'>GPU Score</h4>
                 <Space size="large"/>
-                <h4 className='margin-clear thin'>{gpuInfo[0].name}</h4>
+                <h5 className='margin-clear thin'>{gpuInfo[0].name}</h5>
                 <Space size="medium"/>
                 <div className="inner-grid">
                   <TextBox value='3541' bigSize={true}/>
                 </div>
                 <Space size="medium"/>
                 <div className="inner-grid">
-                  <TextBox borderless={true} title='Test 1' value={result.scores.componentScores[0].subScores[1].score.toFixed(2)}/>
-                  <TextBox borderless={true} title='Test 2' value={result.scores.componentScores[0].subScores[0].score.toFixed(2)}/>
+                  <TextBox borderless={true} title='GT Test 1' value={`${result.scores.componentScores[0].subScores[1].score.toFixed(2)} fps`}/>
+                  <TextBox borderless={true} title='GT Test 2' value={`${result.scores.componentScores[0].subScores[0].score.toFixed(2)} fps`}/>
                 </div>
               </Card>
             </div>
@@ -99,14 +99,14 @@ function App() {
               <Card>
               <h4 className='margin-clear'>CPU Score</h4>
                 <Space size="large"/>
-                <h4 className='margin-clear thin'>{cpuInfo[0].name}</h4>
+                <h5 className='margin-clear thin'>{cpuInfo[0].name}</h5>
                 <Space size="medium"/>
                 <div className="inner-grid">
                   <TextBox value='2915' bigSize={true}/>
                 </div>
                 <Space size="medium"/>
                 <div className="inner-grid">
-                  <TextBox borderless={true}  title='CPU Test Time' value={result.scores.componentScores[1].subScores[0].score.toFixed(2)}/>
+                  <TextBox borderless={true}  title='CPU Test Time' value={`${result.scores.componentScores[1].subScores[0].score.toFixed(2)} ms`}/>
                 </div>
               </Card>
             </div>
