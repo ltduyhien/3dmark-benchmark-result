@@ -11,7 +11,8 @@ main {
   background-image: url(../../img/backgground.jpg);
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: rgba(51, 51, 51, 0.05); }
+  background-color: rgba(51, 51, 51, 0.05);
+  height: 100%; }
 
 #root {
   height: 100%; }
@@ -144,6 +145,9 @@ h6 {
   @media (min-width: 1200px) {
     .container {
       max-width: 1600px; } }
+
+.chartScore {
+  width: 280px; }
 
 @font-face {
   font-family: 'Droid Sans';

@@ -53,8 +53,8 @@ function App() {
           <div class="flex-grid">
             <div class="flex-column col-6">
               <Card className="orientation-horizontal inner-grid">
-                <div>
-                  <h5 className='margin-clear'>Benchmark Score</h5>
+                <div className='chartScore'>
+                  <h4 className='margin-clear'>Benchmark Score</h4>
                   <DonutChart percent={100*score/maxScore} text={score} evalution={((score/maxScore)>=0.8) && 'Excellent'}/>
                   <p>
                   <span style={{ 

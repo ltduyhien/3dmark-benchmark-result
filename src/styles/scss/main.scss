@@ -18,6 +18,7 @@ main{
   background-size:contain;
   background-repeat: no-repeat;
   background-color: rgba($color-base, 0.05);
+  height: 100%;
 }
 
 #root{
@@ -169,6 +170,9 @@ h6{
   }
 }
 
+.chartScore{
+  width: 280px;
+}
 @font-face {
   font-family: 'Droid Sans';
   src: url('../../fonts/DroidSans.ttf') format('truetype');
