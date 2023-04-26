@@ -110,7 +110,7 @@ h6{
 .flex-grid {
   display: flex;
   flex-wrap: wrap;
-  margin: ($grid-gutter) -($grid-gutter / 2);
+  margin: ($grid-gutter*1.5) -($grid-gutter / 2);
 }
 
 .flex-column {
