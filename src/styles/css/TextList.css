@@ -7,7 +7,7 @@
   flex-direction: row;
   margin: 0 16px 16px 16px;
   position: relative;
-  overflow: visible; }
+  z-index: 9999; }
   .text-list .tooltip {
     border-radius: 6px;
     color: #ffffff;
@@ -18,7 +18,8 @@
     background: #333333;
     bottom: 150%;
     left: -32px;
-    box-shadow: 0 2px 8px rgba(51, 51, 51, 0.3); }
+    box-shadow: 0 2px 8px rgba(51, 51, 51, 0.3);
+    z-index: 9999; }
   .text-list.even h6:first-child {
     width: 50%;
     cursor: pointer; }
@@ -28,7 +29,6 @@
     flex-grow: 1;
     text-align: left;
     margin: 0;
-    background: rgba(51, 51, 51, 0.1);
     padding: 4px;
     box-sizing: border-box; }
   .text-list h6:first-child {

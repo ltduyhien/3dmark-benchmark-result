@@ -9,27 +9,29 @@ body{
   
   height: 100%;
   margin: 0;
-  
-  overflow: hidden;
+
 }
 
 main{
-  padding:$padding-global*3 0 0 0;
+  padding:$padding-global*8 0 $padding-global*3 0 ;
   background-image: url(../../img/backgground.jpg);
   background-size:contain;
   background-repeat: no-repeat;
+  background-color: rgba($color-base, 0.05);
 }
 
 #root{
   height: 100%;
   .App{
     height:100%;
-    background-color: rgba($color-base, 0.05);
+    
   }
 }
 
 .App-header{
   background: $color-white;
+  position: fixed;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -59,7 +61,7 @@ main{
 
   div.main-menu{
     margin-left: auto;
-    margin-right: $margin-global;
+    margin-right: $margin-global*3;
     display: flex;
     flex-direction: row;
     gap: 32px;
@@ -122,10 +124,26 @@ h6{
   flex-wrap: wrap;
   margin: ($grid-gutter / 2) -($grid-gutter / 2);
   text-align: center;
+  
+  
+  .card-content-session{
+    position: relative;
+
+  }
+
+  .card-content-session:not(:last-child){
+    border-right: solid 2px rgba($color-base, 0.1);
+  }
   > div {
-    margin:0 ($grid-gutter / 2);
+    margin:0 ($margin-global / 2);
     flex-grow: 1;
     flex:1;
+    
+  }
+
+  h4.section-title{
+    text-align: left;
+    margin: 0  $margin-global $margin-global*3 $margin-global;
   }
 }
 

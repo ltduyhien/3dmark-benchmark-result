@@ -115,7 +115,8 @@ function App() {
             <div class="flex-column col-12">
               <Card>
               <div className="inner-grid">
-                <div>
+                <div className='card-content-session'>
+                <h4 className='margin-clear section-title'>CPU Information</h4>
                   {cpuInfo.map( (cpu, index) => (
                   <div>
                       <TextList even={true} title="CPU" value={`${cpu.name}`} />
@@ -129,7 +130,8 @@ function App() {
                       <TextList tooltip={true} even={true} title="Virtual Technology" value={`${cpu.virtualTechnologyCapable}`}  />                   </div>
                   ))} 
                 </div>
-                <div>
+                <div className='card-content-session'>
+                <h4 className='margin-clear section-title'>GPU Information</h4>
                   {gpuInfo.map( (gpu, index) => (
                     <div>
                         <TextList even={true} title="GPU" value={`${gpu.name}`} />
@@ -145,7 +147,8 @@ function App() {
                     </div>
                   ))} 
                 </div>
-                <div>
+                <div className='card-content-session'>
+                <h4 className='margin-clear section-title'>Drive Information</h4>
                   {storageInfo.map( (storage, index) => (
                     <div>
                       <TextList even={true} title="Drive" value={`${storage.driveName}`} />
