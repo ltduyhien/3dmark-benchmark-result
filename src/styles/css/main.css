@@ -11,7 +11,7 @@ main {
   background-image: url(../../img/backgground.jpg);
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: rgba(51, 51, 51, 0.05);
+  background-color: rgba(68, 68, 68, 0.05);
   height: 100%; }
 
 #root {
@@ -30,7 +30,7 @@ main {
   gap: 32px;
   margin: 0;
   padding: 8px 16px;
-  box-shadow: 0 2px 8px rgba(51, 51, 51, 0.1);
+  box-shadow: 0 2px 8px rgba(68, 68, 68, 0.1);
   overflow: hidden; }
   .App-header img.logo {
     height: 60px;
@@ -54,7 +54,7 @@ main {
       margin: 0; }
 
 p, h1, h2, h3, h4, h5, h6 {
-  color: #333333;
+  color: #444444;
   font-family: 'Droid Sans'; }
 
 p {
@@ -128,7 +128,7 @@ h6 {
   .inner-grid .card-content-session {
     position: relative; }
   .inner-grid .card-content-session:not(:last-child) {
-    border-right: solid 1px rgba(51, 51, 51, 0.1); }
+    border-right: solid 1px rgba(68, 68, 68, 0.1); }
   .inner-grid h4.section-title {
     text-align: left;
     margin: 0 16px 48px 16px; }

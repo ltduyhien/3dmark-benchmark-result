@@ -1,7 +1,8 @@
 @import "_base.scss";
 
 .textbox{
-  border: solid 3px rgba($color-base,0.1);
+  border: solid 2px rgba($color-base,0.1);
+  background: rgba($color-base,0.02);
   border-radius:$border-radius-large;
   padding: $padding-global*1.2 $padding-global;
   box-sizing: border-box;
