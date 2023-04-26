@@ -114,11 +114,12 @@ h6 {
 .inner-grid {
   display: flex;
   flex-direction: row;
-  justify-items: center;
+  justify-content: center;
   margin: 0px;
   text-align: center; }
   .inner-grid > div {
-    margin: 0 8px; }
+    margin: 0 8px;
+    flex-grow: 1; }
   .inner-grid .card-content-session {
     position: relative; }
   .inner-grid .card-content-session:not(:last-child) {

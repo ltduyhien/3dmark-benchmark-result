@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../styles/scss/DonutChart.scss';
 
-function DonutChart ({ percent, text, radius, evalution }){
+function DonutChart ({ percent, text, evalution }){
   return (
     <div className="donut-chart">
       <svg width="100%" height="100%" viewBox="0 0 40 40" className="donut">
@@ -28,7 +28,6 @@ function DonutChart ({ percent, text, radius, evalution }){
 DonutChart.propTypes = {
   percent: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  radius: PropTypes.number.isRequired,
   evalution: PropTypes.string.isRequired,
 
 };

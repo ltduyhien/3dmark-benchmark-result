@@ -13,7 +13,7 @@ function TextList(props) {
   }
   return ( 
     <div  className={`text-list ${props.even ? 'even':''}`}>
-      <h6>{props.title} {props.tooltip?<span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>(?)</span>:null}</h6>
+      <h6>{props.title} {props.tooltip?<span className='hintAnchor' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>?</span>:null}</h6>
       <h6>{props.value}</h6>
       {isVisible && <div className="tooltip">An example tooltips to explain the specification</div>}
     </div>

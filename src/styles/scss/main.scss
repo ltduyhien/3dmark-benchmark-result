@@ -121,12 +121,14 @@ h6{
 .inner-grid{
   display: flex;
   flex-direction: row;
-  justify-items: center;
+  justify-content: center;
   margin: ($grid-gutter / 2) -($grid-gutter / 2);
   text-align: center;
+
   
   > div {
     margin:0 ($margin-global / 2);
+    flex-grow: 1;
   }
 
   .card-content-session{
@@ -137,14 +139,13 @@ h6{
   .card-content-session:not(:last-child){
     border-right: solid 2px rgba($color-base, 0.1);
   }
-  
 
   h4.section-title{
     text-align: left;
     margin: 0  $margin-global $margin-global*3 $margin-global;
   }
-}
 
+}
 
 .container {
   margin: 0 auto;
@@ -231,8 +232,6 @@ h6{
   flex-direction: row;
   height: fit-content;
   text-align: center;
-  
-
   > * {
     margin: 0 $margin-global/2;
     > div{

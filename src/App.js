@@ -21,7 +21,7 @@ function App() {
   const gpuInfo = data.systemInfo.gpu;
   const storageInfo = data.systemInfo.storage;
 
-  const parentRef = React.useRef(null);
+/*   const parentRef = React.useRef(null);
   const [parentSize, setParentSize] = React.useState({
     width: 0,
     height: 0
@@ -35,7 +35,7 @@ function App() {
       });
     }
   }, [parentRef]);
-
+ */
   return (
     <div className="App">
       <header className="App-header">
@@ -53,16 +53,16 @@ function App() {
           <div class="flex-grid">
             <div class="flex-column col-6">
               <Card className="orientation-horizontal inner-grid">
-                <div ref={parentRef}>
+                <div>
                   <h5 className='margin-clear'>Benchmark Score</h5>
-                  <DonutChart percent={100*score/maxScore} text={score} radius={parentSize.height/2} evalution={((score/maxScore)>=0.8) && 'Excellent'}/>
+                  <DonutChart percent={100*score/maxScore} text={score} evalution={((score/maxScore)>=0.8) && 'Excellent'}/>
                   <p>
                   <span style={{ 
                     fontWeight: 'bold',
                     color: '#2BBD77',
                   }}>+ 0.2%</span> increase since last test</p>
                 </div>
-                <div>
+                <div style={{flexGrow:'1'}}>
                 <Space size="large"/>
                 <div className="inner-grid">
                   <TextBox title='Average Score' value='3526'/>
@@ -123,12 +123,11 @@ function App() {
                   {cpuInfo.map( (cpu, index) => (
                   <div>
                       <TextList even={true} title="CPU" value={`${cpu.name}`} />
-                      <TextList tooltip={true} even={true} title="Codename" value={`${cpu.processorCodeName}`} />
-                      <TextList tooltip={true} even={true} title="Clock frequency" value={`${cpu.stockFrequencyMhz} MHz`} />
+                      <TextList even={true} title="Codename" value={`${cpu.processorCodeName}`} />
+                      <TextList tooltip={true} even={true} title="Clock Frequency" value={`${cpu.stockFrequencyMhz} MHz`} />
                       <TextList tooltip={true} even={true} title="Max Frequency" value={`${cpu.maxFrequencyMhz} MHz`}  />
                       <TextList tooltip={true} even={true} title="Cores" value={`${cpu.coreCount} (${cpu.threadCount})`}  />   
-                      <TextList tooltip={true} even={true} title="Package" value={`${cpu.processorPackage}`}  />  
-                      <TextList tooltip={true} even={true} title="Manufacturing process" value={`${cpu.manufacturingProcessNm} `}  />   
+                      <TextList even={true} title="Package" value={`${cpu.processorPackage}`}  />  
                       <TextList tooltip={true} even={true} title="Core VID" value={`${cpu.voltageId}`}  />  
                       <TextList tooltip={true} even={true} title="Virtual Technology" value={`${cpu.virtualTechnologyCapable}`}  />                   </div>
                   ))} 
@@ -138,11 +137,10 @@ function App() {
                   {gpuInfo.map( (gpu, index) => (
                     <div>
                         <TextList even={true} title="GPU" value={`${gpu.name}`} />
-                        <TextList tooltip={true} even={true} title="Memory" value={`${gpu.memory.memoryAmountMb} MB ${gpu.memory.memoryType}`} />
+                        <TextList even={true} title="Memory" value={`${gpu.memory.memoryAmountMb} MB ${gpu.memory.memoryType}`} />
                         <TextList tooltip={true} even={true} title="Available VRAM" value={`${gpu.memory.availableVram} MB`} />
-                        <TextList tooltip={true} even={true} title="Code Name" value={`${gpu.codeName}`}  />
-                        <TextList tooltip={true} even={true} title="Manufacturer" value={`${gpu.pciDeviceId.vendorName} / ${gpu.pciDeviceId.subvendorName}`}  />   
-                        <TextList tooltip={true} even={true} title="Manufacturing process" value={`${gpu.manufacturingProcess} `}  />   
+                        <TextList even={true} title="Code Name" value={`${gpu.codeName}`}  />
+                        <TextList even={true} title="Manufacturer" value={`${gpu.pciDeviceId.vendorName} / ${gpu.pciDeviceId.subvendorName}`}  />    
                         <TextList even={true} title="Driver Version" value={`${gpu.driverInfo.driverVersion}`}  />  
                         <TextList tooltip={true} even={true} title="Clock frequency" value={`${gpu.clockSpeed.gpu.currentMhz} MHz`}  />
                         <TextList tooltip={true} even={true} title="Boost" value={`${gpu.clockSpeed.boost.currentMhz} MHz`}  />
@@ -154,7 +152,7 @@ function App() {
                 <h4 className='margin-clear section-title'>Drive Information</h4>
                   {storageInfo.map( (storage, index) => (
                     <div>
-                      <TextList even={true} title="Drive" value={`${storage.driveName}`} />
+                      <TextList even={true} title="Drive Name" value={`${storage.driveName}`} />
                       <TextList even={true} title="Drive Model" value={`${storage.driveModel}`} />
                       <TextList even={true} title="Drive Type" value={`${storage.driveType}`} />                
                     </div>
