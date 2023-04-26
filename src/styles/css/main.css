@@ -53,6 +53,9 @@ main {
     .App-header div.main-menu h6.main-menu-item {
       margin: 0; }
 
+p, h1, h2, h3, h4, h5, h6 {
+  color: #333333; }
+
 p {
   font-size: 1rem; }
 

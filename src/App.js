@@ -13,6 +13,12 @@ function App() {
   React.useEffect(() => {
     document.title = '3DMark Benchmark';
   }, []);
+
+  const isoTime = data.runStart;
+  const date = new Date(isoTime);
+  const timeString = date.toLocaleTimeString([], { hour12: true, hour: 'numeric',minute:'2-digit'});
+  const dateString = date.toLocaleDateString([], { year: 'numeric', month: 'short', day: 'numeric' });
+  
   const maxScore = 3939;
   const result = data.results[0];
   const score = data.results[0].scores.overallScore.score;
@@ -68,12 +74,14 @@ function App() {
                   <TextBox title='Average Score' value='3526'/>
                   <TextBox title='Best Score' value='3939'/>
                 </div>
-                <Space size="medium"/>
+                <Space size="small"/>
                 <div>
+                  <TextList title="Time" value={`${dateString} ${timeString}`}/>
+                  {/* <TextList title="Bench ID" value={'Some ID'}/> */}
                   <TextList title="CPU" value={cpuInfo[0].name}/>
                   <TextList title="GPU" value={gpuInfo[0].name}/>
                 </div>
-                <Space size="medium"/>
+                <Space size="small"/>
                 <div className='orientation-horizontal'>
                   <Button buttonType='primary' label='Compare Results'/>
                   <Button buttonType='secondary' label='Load'/>
@@ -85,9 +93,9 @@ function App() {
             <div class="flex-column col-3">
               <Card>
                 <h4 className='margin-clear'>GPU Score</h4>
-                <Space size="large"/>
+                <Space size="xlarge"/>
                 <h5 className='margin-clear thin'>{gpuInfo[0].name}</h5>
-                <Space size="medium"/>
+                <Space size="small"/>
                 <div className="inner-grid">
                   <TextBox value='3541' bigSize={true}/>
                 </div>
@@ -101,9 +109,9 @@ function App() {
             <div class="flex-column col-3">
               <Card>
               <h4 className='margin-clear'>CPU Score</h4>
-                <Space size="large"/>
+                <Space size="xlarge"/>
                 <h5 className='margin-clear thin'>{cpuInfo[0].name}</h5>
-                <Space size="medium"/>
+                <Space size="small"/>
                 <div className="inner-grid">
                   <TextBox value='2915' bigSize={true}/>
                 </div>
