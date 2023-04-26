@@ -18,7 +18,7 @@
 
     &.secondary{
       background-color: $color-white;
-      border: 2px solid rgba($color-base,0.2);
+      border: 1px solid rgba($color-base,0.2);
       color: $color-base;
       &:hover {
         background-color: rgba($color-base, 0.15);

@@ -13,7 +13,7 @@
       background-color: #2d6ebb; }
   .button.secondary {
     background-color: #FFFFFF;
-    border: 2px solid rgba(51, 51, 51, 0.2);
+    border: 1px solid rgba(51, 51, 51, 0.2);
     color: #333333; }
     .button.secondary:hover {
       background-color: rgba(51, 51, 51, 0.15); }

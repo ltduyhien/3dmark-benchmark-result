@@ -1,9 +1,9 @@
 @import "_base.scss";
 
 .textbox{
-  border: solid 2px rgba($color-base,0.1);
-  border-radius: $border-radius-medium;
-  padding: $padding-global;
+  border: solid 3px rgba($color-base,0.1);
+  border-radius:$border-radius-large;
+  padding: $padding-global*1.2 $padding-global;
   box-sizing: border-box;
   &.borderless{
     border:none;
