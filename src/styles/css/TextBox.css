@@ -1,7 +1,7 @@
 .textbox {
   border: solid 2px rgba(68, 68, 68, 0.1);
   background: rgba(68, 68, 68, 0.02);
-  border-radius: 12px;
+  border-radius: 6px;
   padding: 19.2px 16px;
   box-sizing: border-box; }
   .textbox.borderless {
@@ -11,6 +11,9 @@
     margin: 0 0 8px 0; }
   .textbox h3 {
     margin: 0; }
-  .textbox.big h1 {
-    margin: 0;
-    color: #2BBD77; }
+  .textbox.big {
+    border: solid 2px #2BBD77;
+    background: transparent; }
+    .textbox.big h1 {
+      margin: 0;
+      color: #2BBD77; }
