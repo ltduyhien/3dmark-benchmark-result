@@ -99,10 +99,10 @@ function App() {
                 <div className="inner-grid">
                   <TextBox value='3541' bigSize={true}/>
                 </div>
-                <Space size="medium"/>
+                <Space size="small"/>
                 <div className="inner-grid">
-                  <TextBox borderless={true} title='GT Test 1' value={`${result.scores.componentScores[0].subScores[1].score.toFixed(2)} fps`}/>
-                  <TextBox borderless={true} title='GT Test 2' value={`${result.scores.componentScores[0].subScores[0].score.toFixed(2)} fps`}/>
+                  <TextBox  title='GT Test 1' value={`${result.scores.componentScores[0].subScores[1].score.toFixed(1)} fps`}/>
+                  <TextBox  title='GT Test 2' value={`${result.scores.componentScores[0].subScores[0].score.toFixed(1)} fps`}/>
                 </div>
               </Card>
             </div>
@@ -115,9 +115,9 @@ function App() {
                 <div className="inner-grid">
                   <TextBox value='2915' bigSize={true}/>
                 </div>
-                <Space size="medium"/>
+                <Space size="small"/>
                 <div className="inner-grid">
-                  <TextBox borderless={true}  title='CPU Test Time' value={`${result.scores.componentScores[1].subScores[0].score.toFixed(2)} ms`}/>
+                  <TextBox  title='CPU Test Time' value={`${result.scores.componentScores[1].subScores[0].score.toFixed(2)} ms`}/>
                 </div>
               </Card>
             </div>
