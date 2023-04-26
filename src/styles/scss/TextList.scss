@@ -5,9 +5,24 @@
   flex-wrap: wrap;
   flex-direction: row;
   margin: 0 $margin-global $margin-global $margin-global ;
+  position: relative;
+  overflow: visible;
+  .tooltip{
+    border-radius: $border-radius-medium;
+    color: #ffffff;
+    overflow: visible;
+    position:absolute;
+    display: block !important;
+    padding: $padding-global $padding-global*2;
+    background: $color-base;
+    bottom:150%;
+    left:-32px;
+    box-shadow: 0 2px 8px rgba($color-base, 0.3);
+  }
   &.even{
     h6:first-child{
       width:50%;
+      cursor: pointer;
     }
     h6:nth-child(2){
       width:50%;
@@ -21,6 +36,7 @@
     }
   }
   h6:first-child{
+    cursor: pointer;
     font-weight: normal;
     margin: 0 ;
     text-align: left;

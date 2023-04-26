@@ -79,8 +79,7 @@ h6 {
 .flex-grid {
   display: flex;
   flex-wrap: wrap;
-  margin: 8px;
-  overflow: hidden; }
+  margin: 8px; }
 
 .flex-column {
   padding: 8px;
@@ -119,7 +118,6 @@ h6 {
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0px;
-  overflow: hidden;
   text-align: center; }
   .inner-grid > div {
     margin: 0 8px;

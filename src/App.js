@@ -119,29 +119,29 @@ function App() {
                   {cpuInfo.map( (cpu, index) => (
                   <div>
                       <TextList even={true} title="CPU" value={`${cpu.name}`} />
-                      <TextList even={true} title="Codename" value={`${cpu.processorCodeName}`} />
-                      <TextList even={true} title="Clock frequency" value={`${cpu.stockFrequencyMhz} MHz`} />
-                      <TextList even={true} title="Max Frequency" value={`${cpu.maxFrequencyMhz} MHz`}  />
-                      <TextList even={true} title="Cores" value={`${cpu.coreCount} (${cpu.threadCount})`}  />   
-                      <TextList even={true} title="Package" value={`${cpu.processorPackage}`}  />  
-                      <TextList even={true} title="Manufacturing process" value={`${cpu.manufacturingProcessNm} `}  />   
-                      <TextList even={true} title="Core VID" value={`${cpu.voltageId}`}  />  
-                      <TextList even={true} title="Virtual Technology" value={`${cpu.virtualTechnologyCapable}`}  />                   </div>
+                      <TextList tooltip={true} even={true} title="Codename" value={`${cpu.processorCodeName}`} />
+                      <TextList tooltip={true} even={true} title="Clock frequency" value={`${cpu.stockFrequencyMhz} MHz`} />
+                      <TextList tooltip={true} even={true} title="Max Frequency" value={`${cpu.maxFrequencyMhz} MHz`}  />
+                      <TextList tooltip={true} even={true} title="Cores" value={`${cpu.coreCount} (${cpu.threadCount})`}  />   
+                      <TextList tooltip={true} even={true} title="Package" value={`${cpu.processorPackage}`}  />  
+                      <TextList tooltip={true} even={true} title="Manufacturing process" value={`${cpu.manufacturingProcessNm} `}  />   
+                      <TextList tooltip={true} even={true} title="Core VID" value={`${cpu.voltageId}`}  />  
+                      <TextList tooltip={true} even={true} title="Virtual Technology" value={`${cpu.virtualTechnologyCapable}`}  />                   </div>
                   ))} 
                 </div>
                 <div>
                   {gpuInfo.map( (gpu, index) => (
                     <div>
                         <TextList even={true} title="GPU" value={`${gpu.name}`} />
-                        <TextList even={true} title="Memory" value={`${gpu.memory.memoryAmountMb} MB ${gpu.memory.memoryType}`} />
-                        <TextList even={true} title="Available VRAM" value={`${gpu.memory.availableVram} MB`} />
-                        <TextList even={true} title="Code Name" value={`${gpu.codeName}`}  />
-                        <TextList even={true} title="Manufacturer" value={`${gpu.pciDeviceId.vendorName} / ${gpu.pciDeviceId.subvendorName}`}  />   
-                        <TextList even={true} title="Manufacturing process" value={`${gpu.manufacturingProcess} `}  />   
+                        <TextList tooltip={true} even={true} title="Memory" value={`${gpu.memory.memoryAmountMb} MB ${gpu.memory.memoryType}`} />
+                        <TextList tooltip={true} even={true} title="Available VRAM" value={`${gpu.memory.availableVram} MB`} />
+                        <TextList tooltip={true} even={true} title="Code Name" value={`${gpu.codeName}`}  />
+                        <TextList tooltip={true} even={true} title="Manufacturer" value={`${gpu.pciDeviceId.vendorName} / ${gpu.pciDeviceId.subvendorName}`}  />   
+                        <TextList tooltip={true} even={true} title="Manufacturing process" value={`${gpu.manufacturingProcess} `}  />   
                         <TextList even={true} title="Driver Version" value={`${gpu.driverInfo.driverVersion}`}  />  
-                        <TextList even={true} title="Clock frequency" value={`${gpu.clockSpeed.gpu.currentMhz} MHz`}  />
-                        <TextList even={true} title="Boost" value={`${gpu.clockSpeed.boost.currentMhz} MHz`}  />
-                        <TextList even={true} title="Memory clock frequency" value={`${gpu.clockSpeed.memory.currentMhz} MHz`}  />                 
+                        <TextList tooltip={true} even={true} title="Clock frequency" value={`${gpu.clockSpeed.gpu.currentMhz} MHz`}  />
+                        <TextList tooltip={true} even={true} title="Boost" value={`${gpu.clockSpeed.boost.currentMhz} MHz`}  />
+                        <TextList tooltip={true} even={true} title="Memory clock frequency" value={`${gpu.clockSpeed.memory.currentMhz} MHz`}  />                 
                     </div>
                   ))} 
                 </div>
