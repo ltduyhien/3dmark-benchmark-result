@@ -9,11 +9,11 @@
     cursor: pointer;
     color: #FFFFFF;
     background: rgba(68, 68, 68, 0.7);
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     border-radius: 999px;
     text-align: center;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 16px;
     font-weight: bold;
     margin-left: 4px; }
@@ -42,7 +42,7 @@
     margin: 0;
     text-align: left; }
   .text-list h6:nth-child(2) {
-    font-weight: 00;
+    font-weight: 500;
     flex-grow: 1;
     text-align: right;
     margin: 0; }
