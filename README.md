@@ -1,6 +1,12 @@
 # 3DMark Result Page
 
-Please run
+A landing page to show benchmark result from user with Time Spy Extreme task
+
+Please run the followings
+
+### `npm install`
+
+And then 
 
 ### `npm run dev`
 
