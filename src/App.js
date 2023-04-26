@@ -93,8 +93,10 @@ function App() {
             <div class="flex-column col-3">
               <Card>
                 <h4 className='margin-clear'>GPU Score</h4>
-                <Space size="xlarge"/>
+                <Space size="small"/>
                 <h5 className='margin-clear thin'>{gpuInfo[0].name}</h5>
+                <Space size="medium"/>
+                
                 <Space size="small"/>
                 <div className="inner-grid">
                   <TextBox value='3541' bigSize={true}/>
@@ -109,9 +111,10 @@ function App() {
             <div class="flex-column col-3">
               <Card>
               <h4 className='margin-clear'>CPU Score</h4>
-                <Space size="xlarge"/>
-                <h5 className='margin-clear thin'>{cpuInfo[0].name}</h5>
-                <Space size="small"/>
+              <Space size="small"/>
+              <h5 className='margin-clear thin'>{cpuInfo[0].name}</h5>
+                <Space size="large"/>
+
                 <div className="inner-grid">
                   <TextBox value='2915' bigSize={true}/>
                 </div>
