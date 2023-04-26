@@ -1,0 +1,209 @@
+:export {
+  colorGreen: #2BBD77; }
+
+html {
+  background-color: #FFFFFF;
+  height: 100%; }
+
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; }
+
+main {
+  padding: 48px 0 0 0;
+  background-image: url(../../img/backgground.jpg);
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+#root {
+  height: 100%; }
+  #root .App {
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.05); }
+
+.App-header {
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 32px;
+  margin: 0;
+  padding: 8px 16px;
+  box-shadow: 0 2px 8px rgba(51, 51, 51, 0.1);
+  overflow: hidden; }
+  .App-header img.logo {
+    height: 60px;
+    flex-grow: 0; }
+  .App-header h5.domain {
+    display: block;
+    margin: 0;
+    height: 100%; }
+  .App-header h5.solution {
+    height: 100%;
+    font-weight: 400;
+    display: block;
+    margin: 0; }
+  .App-header div.main-menu {
+    margin-left: auto;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px; }
+    .App-header div.main-menu h6.main-menu-item {
+      margin: 0; }
+
+p {
+  font-size: 1rem; }
+
+h1 {
+  font-size: 2.25rem; }
+
+h2 {
+  font-size: 1.875rem; }
+
+h3 {
+  font-size: 1.5rem; }
+
+h4 {
+  font-size: 1.25rem; }
+
+h5 {
+  font-size: 1.125rem; }
+
+h6 {
+  font-size: 1rem;
+  font-weight: 500; }
+
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 8px;
+  overflow: hidden; }
+
+.flex-column {
+  padding: 8px;
+  box-sizing: border-box;
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+  margin: 0 8px; }
+  .flex-column.col-1 {
+    flex-basis: calc((100% / 12 - 16px) * 1); }
+  .flex-column.col-2 {
+    flex-basis: calc((100% / 12 - 16px) * 2); }
+  .flex-column.col-3 {
+    flex-basis: calc((100% / 12 - 16px) * 3); }
+  .flex-column.col-4 {
+    flex-basis: calc((100% / 12 - 16px) * 4); }
+  .flex-column.col-5 {
+    flex-basis: calc((100% / 12 - 16px) * 5); }
+  .flex-column.col-6 {
+    flex-basis: calc((100% / 12 - 16px) * 6); }
+  .flex-column.col-7 {
+    flex-basis: calc((100% / 12 - 16px) * 7); }
+  .flex-column.col-8 {
+    flex-basis: calc((100% / 12 - 16px) * 8); }
+  .flex-column.col-9 {
+    flex-basis: calc((100% / 12 - 16px) * 9); }
+  .flex-column.col-10 {
+    flex-basis: calc((100% / 12 - 16px) * 10); }
+  .flex-column.col-11 {
+    flex-basis: calc((100% / 12 - 16px) * 11); }
+  .flex-column.col-12 {
+    flex-basis: calc((100% / 12 - 16px) * 12); }
+
+.inner-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0px;
+  overflow: hidden;
+  text-align: center; }
+  .inner-grid > div {
+    margin: 0 8px;
+    flex-grow: 1;
+    flex: 1; }
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 16px; }
+  @media (min-width: 576px) {
+    .container {
+      max-width: 540px; } }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px; } }
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px; } }
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1600px; } }
+
+@font-face {
+  font-family: 'Droid Sans';
+  src: url("../../fonts/DroidSans.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
+
+@font-face {
+  font-family: 'Droid Sans';
+  src: url("../../fonts/DroidSans-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+  text-rendering: optimizeLegibility; }
+
+@font-face {
+  font-family: 'LatoLatin';
+  src: url("../../fonts/LatoLatinBlack-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+  text-rendering: optimizeLegibility; }
+
+@font-face {
+  font-family: 'LatoLatin';
+  src: url("../../fonts/LatoLatin-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  text-rendering: optimizeLegibility; }
+
+@font-face {
+  font-family: 'LatoLatin';
+  src: url("../../fonts/LatoLatin-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  text-rendering: optimizeLegibility; }
+
+@font-face {
+  font-family: 'LatoLatin';
+  src: url("../../fonts/LatoLatinLight-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+  text-rendering: optimizeLegibility; }
+
+@font-face {
+  font-family: 'LatoLatin';
+  src: url("../../fonts/LatoLatinThin-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100;
+  text-rendering: optimizeLegibility; }
+
+.margin-clear {
+  margin: 0; }
+
+.thin {
+  font-weight: 400; }
+
+.orientation-horizontal {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  text-align: center; }
+  .orientation-horizontal > * {
+    margin: 0 8px; }
+    .orientation-horizontal > * > div {
+      margin: 8px 0; }

@@ -1,0 +1,14 @@
+:export {
+  colorGreen: #2BBD77; }
+
+.space {
+  display: block;
+  width: 100%; }
+  .space.space-s {
+    height: 16px; }
+  .space.space-m {
+    height: 32px; }
+  .space.space-l {
+    height: 48px; }
+  .space.space-xl {
+    height: 64px; }

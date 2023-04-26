@@ -1,0 +1,24 @@
+@import "_base.scss";
+
+.textbox{
+  border: solid 2px rgba($color-base,0.1);
+  border-radius: $border-radius-medium;
+  padding: $padding-global;
+  box-sizing: border-box;
+  &.borderless{
+    border:none;
+  }
+  h6{
+    font-weight: 400;
+    margin: 0 0 $margin-global/2 0;
+  }
+  h3{
+    margin: 0;
+  }
+  &.big{
+    h1{
+      margin: 0;
+      color: $color-green;
+    }
+  }
+}

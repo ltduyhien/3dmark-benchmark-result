@@ -1,0 +1,18 @@
+:export {
+  colorGreen: #2BBD77; }
+
+.textbox {
+  border: solid 2px rgba(51, 51, 51, 0.1);
+  border-radius: 6px;
+  padding: 16px;
+  box-sizing: border-box; }
+  .textbox.borderless {
+    border: none; }
+  .textbox h6 {
+    font-weight: 400;
+    margin: 0 0 8px 0; }
+  .textbox h3 {
+    margin: 0; }
+  .textbox.big h1 {
+    margin: 0;
+    color: #2BBD77; }

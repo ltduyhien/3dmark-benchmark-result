@@ -1,0 +1,18 @@
+@import "_base.scss";
+
+.space{
+  display: block;
+  width: 100%;
+  &.space-s{
+    height: $padding-global;
+  }
+  &.space-m{
+    height: $padding-global*2;
+  }
+  &.space-l{
+    height: $padding-global*3;
+  }
+  &.space-xl{
+    height: $padding-global*4;
+  }
+}

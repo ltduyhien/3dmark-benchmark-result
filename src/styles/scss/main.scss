@@ -1,0 +1,228 @@
+@import "_base.scss";
+
+html{
+  background-color: $color-white;
+  height: 100%;
+}
+
+body{
+  
+  height: 100%;
+  margin: 0;
+  
+  overflow: hidden;
+}
+
+main{
+  padding:$padding-global*3 0 0 0;
+  background-image: url(../../img/backgground.jpg);
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+
+#root{
+  height: 100%;
+  .App{
+    height:100%;
+    background-color: rgba($color-base, 0.05);
+  }
+}
+
+.App-header{
+  background: $color-white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:flex-start;
+  gap: 32px;
+  margin: 0 ;
+  padding: $padding-global/2 $padding-global;
+  box-shadow: 0 2px 8px rgba($color-base, 0.1);
+
+  overflow: hidden;
+
+  img.logo{
+    height:60px;
+    flex-grow: 0;
+  }
+  h5.domain{
+    display: block;
+    margin: 0;
+    height: 100%;
+  }
+  h5.solution{
+    height: 100%;
+    font-weight: 400;
+    display: block;
+    margin: 0;
+  }
+
+  div.main-menu{
+    margin-left: auto;
+    margin-right: $margin-global;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+
+    h6.main-menu-item{
+      margin:0;
+    }
+  }
+}
+p{
+  font-size: $font-size-large;
+}
+
+h1{
+  font-size: $font-size-h1;
+}
+h2{
+  font-size: $font-size-h2;
+}
+h3{
+  font-size: $font-size-h3;
+}
+h4{
+  font-size: $font-size-h4;
+}
+h5{
+  font-size: $font-size-h5;
+}
+h6{
+  font-size: $font-size-h6;
+  font-weight: 500;
+}
+
+
+// Flexbox Grid
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: ($grid-gutter) -($grid-gutter / 2);
+  overflow: hidden;
+}
+
+.flex-column {
+  padding: ($grid-gutter / 2);
+  box-sizing: border-box;
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+  margin:0 ($grid-gutter / 2);
+
+  @for $i from 1 through $grid-columns {
+    &.col-#{$i} {
+      flex-basis: calc((100% / #{$grid-columns} - #{$grid-gutter}) * #{$i});
+    }
+  }
+}
+
+.inner-grid{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: ($grid-gutter / 2) -($grid-gutter / 2);
+  overflow: hidden;
+  text-align: center;
+  > div {
+    margin:0 ($grid-gutter / 2);
+    flex-grow: 1;
+    flex:1;
+  }
+}
+
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 $padding-global;
+
+  @media (min-width: $breakpoint-sm) {
+    max-width: 540px;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    max-width: 720px;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    max-width: 960px;
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    max-width: 1600px;
+  }
+}
+
+@font-face {
+  font-family: 'Droid Sans';
+  src: url('../../fonts/DroidSans.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Droid Sans';
+  src: url('../../fonts/DroidSans-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'LatoLatin';
+  src: url('../../fonts/LatoLatinBlack-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 900;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'LatoLatin';
+  src: url('../../fonts/LatoLatin-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'LatoLatin';
+  src: url('../../fonts/LatoLatin-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'LatoLatin';
+  src: url('../../fonts/LatoLatinLight-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'LatoLatin';
+  src: url('../../fonts/LatoLatinThin-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 100;
+  text-rendering: optimizeLegibility;
+}
+
+.margin-clear{
+  margin:0;
+}
+
+.thin{
+  font-weight: 400;
+}
+
+.orientation-horizontal{
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  text-align: center;
+  
+
+  > * {
+    margin: 0 $margin-global/2;
+    > div{
+      margin: 8px 0;
+    }
+  }
+}
