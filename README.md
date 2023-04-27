@@ -29,13 +29,11 @@ Build and run
 ***
 
 Install dependencies
-#### `npm install`
-
+### `npm install`
 
 Run "npm run prod" for production environment
 ### `npm run prod`
 ##### Open [http://localhost:3000](http://localhost:3000)
-
 
 Run "npm run dev" for dev environment
 ### `npm run dev`
