@@ -104,7 +104,6 @@ h6{
 }
 
 .flex-column {
-  padding: ($grid-gutter / 2);
   box-sizing: border-box;
   flex-grow: 1;
   flex-basis: 0;
@@ -113,7 +112,7 @@ h6{
 
   @for $i from 1 through $grid-columns {
     &.col-#{$i} {
-      flex-basis: calc((100% / #{$grid-columns} - #{$grid-gutter}) * #{$i});
+      flex-basis: calc(#{$i} * (100% / #{$grid-columns}) - #{$grid-gutter} * 2);
     }
   }
 }
