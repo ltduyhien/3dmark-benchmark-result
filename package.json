@@ -18,7 +18,8 @@
     "eject": "react-scripts eject",
     "scss-build": "node-sass src/styles/scss -o src/styles/css",
     "scss-watch": "node-sass src/styles/scss -o src/styles/css --watch",
-    "dev": "npm run scss-build & npm run scss-watch & nodemon --watch src/styles/css --exec 'npm start'"
+    "dev": "npm run scss-build & npm run scss-watch & nodemon --watch src/styles/css --exec 'npm start'",
+    "prod": "npm run scss-build & 'npm start'"
   },
   "eslintConfig": {
     "extends": [
