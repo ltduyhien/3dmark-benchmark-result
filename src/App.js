@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import logo from './img/logo.png';
 import './styles/css/main.css';
+
 import Card from './components/Card';
 import TextBox from './components/TextBox';
 import TextList from './components/TextList';
@@ -11,15 +12,16 @@ import Button from './components/Button';
 import LineChart from './components/LineChart';
 import RadarChart from './components/RadarChart';
 
-import data from './test.json';
-import chartData from './chartExample.json';
-import radarChartData from './radarChartExample.json';
+import data from './data/test.json';
+import chartData from './data/chartExample.json';
+import radarChartData from './data/radarChartExample.json';
 
 function App() {
   React.useEffect(() => {
     document.title = '3DMark Benchmark';
   }, []);
 
+  // Prepare data informations
   const isoTime = data.runStart;
   const date = new Date(isoTime);
   const timeString = date.toLocaleTimeString([], { hour12: true, hour: 'numeric',minute:'2-digit'});
@@ -33,6 +35,7 @@ function App() {
   const gpuInfo = data.systemInfo.gpu;
   const storageInfo = data.systemInfo.storage;
 
+  // Plot line chart demo
   const DemoLine = () => {
     const [data, setData] = useState(chartData);
 
@@ -61,6 +64,8 @@ function App() {
     return <LineChart config={config} />;
   };
 
+
+  // Plot radar chart demo
   const DemoRadar = () => {
     const [data, setData] = useState(radarChartData);
   
@@ -123,6 +128,7 @@ function App() {
     }
   }, [parentRef]);
  */
+
   return (
     <div className="App">
       <header className="App-header">
@@ -137,7 +143,10 @@ function App() {
       </header>
       <main>
         <div className="container">
+
           <div className="flex-grid">
+
+            {/* Benchmark Sccore Card */}
             <div className="flex-column col-6">
               <Card className="orientation-horizontal inner-grid">
                 <div className='chartScore'>
@@ -171,6 +180,8 @@ function App() {
                 </div>
               </Card>
             </div>
+
+            {/* GPU Score Sccore Card */}
             <div className="flex-column col-3">
               <Card>
                 <h4 className='margin-clear'>GPU Score</h4>
@@ -192,6 +203,8 @@ function App() {
                 <TextList title="Average Temperature" value={`${gpuInfo[0].averageTemperature} °C`}/>
               </Card>
             </div>
+
+            {/* CPU Sccore Card */}
             <div className="flex-column col-3">
               <Card>
               <h4 className='margin-clear'>CPU Score</h4>
@@ -211,14 +224,19 @@ function App() {
                 <TextList title="Average Temperature" value={`${cpuInfo[0].averageTemperature} °C`}/>
               </Card>
             </div>
-          </div>
 
+          </div>
+          
           <div className="flex-grid">
+
+            {/* Line Chart Card */}
             <div className="flex-column col-6">
               <Card>
                 <DemoLine />
               </Card>
             </div>
+
+            {/* Radar Chart Card */}
             <div className="flex-column col-6">
               <Card>
                 <DemoRadar />
@@ -227,50 +245,57 @@ function App() {
           </div>
 
           <div className="flex-grid">
+
+            {/* System Information Card */}
             <div className="flex-column col-12">
               <Card>
-              <div className="inner-grid">
-                <div className='card-content-session'>
-                <h4 className='margin-clear section-title'>CPU Information</h4>
-                  {cpuInfo.map( (cpu, index) => (
-                  <div key={index} >
-                      <TextList even={true} title="CPU" value={`${cpu.name}`} />
-                      <TextList even={true} title="Codename" value={`${cpu.processorCodeName}`} />
-                      <TextList tooltip={true} even={true} title="Clock Frequency" value={`${cpu.stockFrequencyMhz} MHz`} />
-                      <TextList tooltip={true} even={true} title="Max Frequency" value={`${cpu.maxFrequencyMhz} MHz`}  />
-                      <TextList tooltip={true} even={true} title="Cores" value={`${cpu.coreCount} (${cpu.threadCount})`}  />   
-                      <TextList even={true} title="Package" value={`${cpu.processorPackage}`}  />  
-                      <TextList tooltip={true} even={true} title="Core VID" value={`${cpu.voltageId}`}  />  
-                      <TextList tooltip={true} even={true} title="Virtual Technology" value={`${cpu.virtualTechnologyCapable}`}  />                   </div>
-                  ))} 
+                <div className="inner-grid">
+                  
+                  <div className='card-content-session'>
+                    <h4 className='margin-clear section-title'>CPU Information</h4>
+                    {cpuInfo.map( (cpu, index) => (
+                      <div key={index} >
+                          <TextList even={true} title="CPU" value={`${cpu.name}`} />
+                          <TextList even={true} title="Codename" value={`${cpu.processorCodeName}`} />
+                          <TextList tooltip={true} even={true} title="Clock Frequency" value={`${cpu.stockFrequencyMhz} MHz`} />
+                          <TextList tooltip={true} even={true} title="Max Frequency" value={`${cpu.maxFrequencyMhz} MHz`}  />
+                          <TextList tooltip={true} even={true} title="Cores" value={`${cpu.coreCount} (${cpu.threadCount})`}  />   
+                          <TextList even={true} title="Package" value={`${cpu.processorPackage}`}  />  
+                          <TextList tooltip={true} even={true} title="Core VID" value={`${cpu.voltageId}`}  />  
+                          <TextList tooltip={true} even={true} title="Virtual Technology" value={`${cpu.virtualTechnologyCapable}`}  />
+                      </div>
+                    ))}
+                  </div> 
+
+                  <div className='card-content-session'>
+                    <h4 className='margin-clear section-title'>GPU Information</h4>
+                    {gpuInfo.map( (gpu, index) => (
+                      <div key={index} >
+                          <TextList even={true} title="GPU" value={`${gpu.name}`} />
+                          <TextList even={true} title="Memory" value={`${gpu.memory.memoryAmountMb} MB ${gpu.memory.memoryType}`} />
+                          <TextList tooltip={true} even={true} title="Available VRAM" value={`${gpu.memory.availableVram} MB`} />
+                          <TextList even={true} title="Code Name" value={`${gpu.codeName}`}  />
+                          <TextList even={true} title="Manufacturer" value={`${gpu.pciDeviceId.vendorName} / ${gpu.pciDeviceId.subvendorName}`}  />    
+                          <TextList even={true} title="Driver Version" value={`${gpu.driverInfo.driverVersion}`}  />  
+                          <TextList tooltip={true} even={true} title="Clock frequency" value={`${gpu.clockSpeed.gpu.currentMhz} MHz`}  />
+                          <TextList tooltip={true} even={true} title="Boost" value={`${gpu.clockSpeed.boost.currentMhz} MHz`}  />
+                          <TextList tooltip={true} even={true} title="Memory clock frequency" value={`${gpu.clockSpeed.memory.currentMhz} MHz`}  />                 
+                      </div>
+                    ))} 
+                  </div>
+
+                  <div className='card-content-session'>
+                    <h4 className='margin-clear section-title'>Drive Information</h4>
+                    {storageInfo.map( (storage, index) => (
+                      <div>
+                        <TextList even={true} title="Drive Name" value={`${storage.driveName}`} />
+                        <TextList even={true} title="Drive Model" value={`${storage.driveModel}`} />
+                        <TextList even={true} title="Drive Type" value={`${storage.driveType}`} />                
+                      </div>
+                    ))} 
+                  </div>
+                  
                 </div>
-                <div className='card-content-session'>
-                <h4 className='margin-clear section-title'>GPU Information</h4>
-                  {gpuInfo.map( (gpu, index) => (
-                    <div key={index} >
-                        <TextList even={true} title="GPU" value={`${gpu.name}`} />
-                        <TextList even={true} title="Memory" value={`${gpu.memory.memoryAmountMb} MB ${gpu.memory.memoryType}`} />
-                        <TextList tooltip={true} even={true} title="Available VRAM" value={`${gpu.memory.availableVram} MB`} />
-                        <TextList even={true} title="Code Name" value={`${gpu.codeName}`}  />
-                        <TextList even={true} title="Manufacturer" value={`${gpu.pciDeviceId.vendorName} / ${gpu.pciDeviceId.subvendorName}`}  />    
-                        <TextList even={true} title="Driver Version" value={`${gpu.driverInfo.driverVersion}`}  />  
-                        <TextList tooltip={true} even={true} title="Clock frequency" value={`${gpu.clockSpeed.gpu.currentMhz} MHz`}  />
-                        <TextList tooltip={true} even={true} title="Boost" value={`${gpu.clockSpeed.boost.currentMhz} MHz`}  />
-                        <TextList tooltip={true} even={true} title="Memory clock frequency" value={`${gpu.clockSpeed.memory.currentMhz} MHz`}  />                 
-                    </div>
-                  ))} 
-                </div>
-                <div className='card-content-session'>
-                <h4 className='margin-clear section-title'>Drive Information</h4>
-                  {storageInfo.map( (storage, index) => (
-                    <div>
-                      <TextList even={true} title="Drive Name" value={`${storage.driveName}`} />
-                      <TextList even={true} title="Drive Model" value={`${storage.driveModel}`} />
-                      <TextList even={true} title="Drive Type" value={`${storage.driveType}`} />                
-                    </div>
-                  ))} 
-                </div>
-              </div>
               </Card>
             </div>
           </div>

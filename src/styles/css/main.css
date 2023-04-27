@@ -2,7 +2,9 @@ html {
   background-color: #FFFFFF; }
 
 body {
-  margin: 0; }
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 main {
   padding: 128px 0 48px 0;

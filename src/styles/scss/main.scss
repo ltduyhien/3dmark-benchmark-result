@@ -5,9 +5,9 @@ html{
 }
 
 body{
-  
   margin: 0;
-
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 main{
@@ -16,11 +16,6 @@ main{
   background-size:contain;
   background-repeat: no-repeat;
   background-color: rgba($color-base, 0.05);
-}
-
-#root{
-  .App{
-  }
 }
 
 .App-header{
