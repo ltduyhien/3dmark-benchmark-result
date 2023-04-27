@@ -24,6 +24,7 @@ main{
 }
 
 .App-header{
+  z-index: 999;
   background: $color-white;
   position: fixed;
   width: 100%;

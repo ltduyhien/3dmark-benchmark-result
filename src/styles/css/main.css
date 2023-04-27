@@ -12,6 +12,7 @@ main {
   background-color: rgba(68, 68, 68, 0.05); }
 
 .App-header {
+  z-index: 999;
   background: #FFFFFF;
   position: fixed;
   width: 100%;
