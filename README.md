@@ -6,9 +6,7 @@ A landing page to show benchmark result from user with Time Spy Extreme task. A 
 User persona
 ***
 
-Name: Alex
-Age: 25
-Occupation: Gaming Enthusiast
+Name: Alex / Age: 25 / Occupation: Gaming Enthusiast
 
 Background: Alex is a tech-savvy individual who is passionate about gaming. He is always looking for ways to improve his gaming experience, including upgrading his PC hardware. Alex is particularly interested in benchmarking his GPU performance to ensure that he is getting the most out of his gaming rig.
 
