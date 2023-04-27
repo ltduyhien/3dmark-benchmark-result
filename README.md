@@ -6,12 +6,12 @@ Run the followings
 
 ### `npm install`
 
-And then run "npm run dev" for dev envr
-
-### `npm run dev`
-
-Run "npm run prod" for production envr
+Run "npm run prod" for production environment
 
 ### `npm run prod`
+
+Run "npm run dev" for dev environment
+
+### `npm run dev`
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
