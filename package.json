@@ -39,7 +39,8 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^7.0.3",
+    "@ant-design/charts": "^1.4.2",
+    "node-sass": "^8.0.0",
     "nodemon": "^2.0.22",
     "sass": "^1.62.1",
     "sass-loader": "^13.2.2"

@@ -2,12 +2,10 @@
 
 html{
   background-color: $color-white;
-  height: 100%;
 }
 
 body{
   
-  height: 100%;
   margin: 0;
 
 }
@@ -18,14 +16,10 @@ main{
   background-size:contain;
   background-repeat: no-repeat;
   background-color: rgba($color-base, 0.05);
-  height: 100%;
 }
 
 #root{
-  height: 100%;
   .App{
-    height:100%;
-    
   }
 }
 

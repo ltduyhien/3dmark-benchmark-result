@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from './img/logo.png';
 import './styles/css/main.css';
 import Card from './components/Card';
@@ -7,7 +7,9 @@ import TextList from './components/TextList';
 import Space from './components/Space';
 import DonutChart from './components/DonutChart';
 import data from './test.json';
+import chartData from './chartExample.json';
 import Button from './components/Button';
+import LineChart from './components/LineChart';
 
 function App() {
   React.useEffect(() => {
@@ -26,6 +28,34 @@ function App() {
   const cpuInfo = data.systemInfo.cpu;
   const gpuInfo = data.systemInfo.gpu;
   const storageInfo = data.systemInfo.storage;
+
+  const DemoLine = () => {
+    const [data, setData] = useState(chartData);
+
+    const config = {
+      data,
+      xField: 'time',
+      yField: 'value',
+      seriesField: 'name',
+      yAxis: {
+        label: {
+          formatter: (v) => `${(v / 10e8).toFixed(0)} `,
+        },
+      },
+      legend: {
+        position: 'top',
+      },
+      smooth: true,
+      animation: {
+        appear: {
+          animation: 'path-in',
+          duration: 5000,
+        },
+      },
+    };
+  
+    return <LineChart config={config} />;
+  };
 
 /*   const parentRef = React.useRef(null);
   const [parentSize, setParentSize] = React.useState({
@@ -55,13 +85,13 @@ function App() {
         </div>
       </header>
       <main>
-        <div class="container">
-          <div class="flex-grid">
-            <div class="flex-column col-6">
+        <div className="container">
+          <div className="flex-grid">
+            <div className="flex-column col-6">
               <Card className="orientation-horizontal inner-grid">
                 <div className='chartScore'>
                   <h4 className='margin-clear'>Benchmark Score</h4>
-                  <DonutChart percent={100*score/maxScore} text={score} evalution={((score/maxScore)>=0.8) && 'Excellent'}/>
+                  <DonutChart percent={(100*score/maxScore).toString()} text={score.toString()} evalution={((score/maxScore)>=0.8) && 'Excellent'}/>
                   <p>
                   <span style={{ 
                     fontWeight: 'bold',
@@ -90,7 +120,7 @@ function App() {
                 </div>
               </Card>
             </div>
-            <div class="flex-column col-3">
+            <div className="flex-column col-3">
               <Card>
                 <h4 className='margin-clear'>GPU Score</h4>
                 <Space size="small"/>
@@ -111,7 +141,7 @@ function App() {
                 <TextList title="Average Temperature" value={`${gpuInfo[0].averageTemperature} °C`}/>
               </Card>
             </div>
-            <div class="flex-column col-3">
+            <div className="flex-column col-3">
               <Card>
               <h4 className='margin-clear'>CPU Score</h4>
               <Space size="small"/>
@@ -131,14 +161,23 @@ function App() {
               </Card>
             </div>
           </div>
-          <div class="flex-grid">
-            <div class="flex-column col-12">
+
+          <div className="flex-grid">
+            <div className="flex-column col-12">
+              <Card>
+                <DemoLine />
+              </Card>
+            </div>
+          </div>
+
+          <div className="flex-grid">
+            <div className="flex-column col-12">
               <Card>
               <div className="inner-grid">
                 <div className='card-content-session'>
                 <h4 className='margin-clear section-title'>CPU Information</h4>
                   {cpuInfo.map( (cpu, index) => (
-                  <div>
+                  <div key={index} >
                       <TextList even={true} title="CPU" value={`${cpu.name}`} />
                       <TextList even={true} title="Codename" value={`${cpu.processorCodeName}`} />
                       <TextList tooltip={true} even={true} title="Clock Frequency" value={`${cpu.stockFrequencyMhz} MHz`} />
@@ -152,7 +191,7 @@ function App() {
                 <div className='card-content-session'>
                 <h4 className='margin-clear section-title'>GPU Information</h4>
                   {gpuInfo.map( (gpu, index) => (
-                    <div>
+                    <div key={index} >
                         <TextList even={true} title="GPU" value={`${gpu.name}`} />
                         <TextList even={true} title="Memory" value={`${gpu.memory.memoryAmountMb} MB ${gpu.memory.memoryType}`} />
                         <TextList tooltip={true} even={true} title="Available VRAM" value={`${gpu.memory.availableVram} MB`} />

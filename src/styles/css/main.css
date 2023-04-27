@@ -1,9 +1,7 @@
 html {
-  background-color: #FFFFFF;
-  height: 100%; }
+  background-color: #FFFFFF; }
 
 body {
-  height: 100%;
   margin: 0; }
 
 main {
@@ -11,13 +9,7 @@ main {
   background-image: url(../../img/backgground.jpg);
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: rgba(68, 68, 68, 0.05);
-  height: 100%; }
-
-#root {
-  height: 100%; }
-  #root .App {
-    height: 100%; }
+  background-color: rgba(68, 68, 68, 0.05); }
 
 .App-header {
   background: #FFFFFF;
