@@ -25,17 +25,18 @@ Suggested direction for features
 - Assist users with understanding the meaning of scores by providing perspectives of comparision to other benchmarking results of different people and devices.
 
 ***
-Build and runing
+Build and run
 ***
 
-Run the followings
-
+Install dependencies
 #### `npm install`
 
+
 Run "npm run prod" for production environment
-#### `npm run prod`
+### `npm run prod`
 ##### Open [http://localhost:3000](http://localhost:3000)
 
+
 Run "npm run dev" for dev environment
-## `npm run dev`
+### `npm run dev`
 ##### Open [http://localhost:3000](http://localhost:3000)
