@@ -72,11 +72,11 @@ function App() {
                 <Space size="large"/>
                 <div className="inner-grid">
                   <TextBox title='Average Score' value='3526'/>
-                  <TextBox title='Best Score' value='3939'/>
+                  <TextBox title='Best Score' value='3939' orange={true}/>
                 </div>
                 <Space size="small"/>
                 <div>
-                  <TextList title="Time" value={`${dateString} ${timeString}`}/>
+                  <TextList title="Start Time" value={`${dateString} ${timeString}`}/>
                   {/* <TextList title="Bench ID" value={'Some ID'}/> */}
                   <TextList title="CPU" value={cpuInfo[0].name}/>
                   <TextList title="GPU" value={gpuInfo[0].name}/>

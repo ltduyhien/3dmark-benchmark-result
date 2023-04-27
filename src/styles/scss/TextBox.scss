@@ -1,14 +1,11 @@
 @import "_base.scss";
 
 .textbox{
-  border: solid 2px rgba($color-base,0.1);
+  border: solid 3px rgba($color-base,0.1);
   background: rgba($color-base,0.02);
   border-radius:$border-radius-medium;
   padding: $padding-global*1.2 $padding-global;
   box-sizing: border-box;
-  &.borderless{
-    border:none;
-  }
   h6{
     font-weight: 400;
     margin: 0 0 $margin-global/2 0;
@@ -16,10 +13,24 @@
   h3{
     margin: 0;
   }
-  &.big{
-    border: solid 2px $color-green;
+  &.borderless{
+    border:none;
+  }
+  &.orange{
+    border: solid 3px rgba($color-brand, 0.3);
     background: transparent;
-    h1{
+    h6{
+      
+    }
+    h3{
+      margin: 0;
+      color: $color-brand;
+    }
+  }
+  &.big{
+    border: solid 3px rgba($color-green, 0.3);
+    background: transparent;
+    h2{
       margin: 0;
       color: $color-green;
     }

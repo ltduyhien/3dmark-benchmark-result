@@ -1,19 +1,25 @@
 .textbox {
-  border: solid 2px rgba(68, 68, 68, 0.1);
+  border: solid 3px rgba(68, 68, 68, 0.1);
   background: rgba(68, 68, 68, 0.02);
   border-radius: 6px;
   padding: 19.2px 16px;
   box-sizing: border-box; }
-  .textbox.borderless {
-    border: none; }
   .textbox h6 {
     font-weight: 400;
     margin: 0 0 8px 0; }
   .textbox h3 {
     margin: 0; }
-  .textbox.big {
-    border: solid 2px #2BBD77;
+  .textbox.borderless {
+    border: none; }
+  .textbox.orange {
+    border: solid 3px rgba(245, 125, 32, 0.3);
     background: transparent; }
-    .textbox.big h1 {
+    .textbox.orange h3 {
+      margin: 0;
+      color: #F57D20; }
+  .textbox.big {
+    border: solid 3px rgba(43, 189, 119, 0.3);
+    background: transparent; }
+    .textbox.big h2 {
       margin: 0;
       color: #2BBD77; }

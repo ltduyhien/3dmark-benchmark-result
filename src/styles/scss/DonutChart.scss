@@ -17,12 +17,6 @@
     }
 }
 
-@media (min-width: 992px) {
-    .svg-item {
-        width: 80%;
-    }
-}
-
 .donut-ring {
     stroke: #EBEBEB;
 }
@@ -45,26 +39,15 @@
 }
 
 .donut-title {
-  font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+  font-family: $font-family-safe;
   font-size: 0.17rem;
   font-weight: 400;
   line-height: 1;
   fill: $color-base;
-  transform: translateY(0.25em);
-}
-
-
-.donut-label {
-    font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
-    font-size: 0.4rem;
-    font-weight: 200;
-    line-height: 1;
-    fill: #000;
-    transform: translateY(0.25em);
 }
 
 .donut-score{
-    font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+    font-family: $font-family-safe;
     font-size: 0.45rem;
     line-height: 1;
     transform: translateY(0.5em);
@@ -72,7 +55,8 @@
 }
 
 .donut-subtitle {
-    font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+    font-family: $font-family-safe;
+    font-weight: 400;
     font-size: 0.18rem;
     line-height: 1;
     transform: translateY(0.5em);

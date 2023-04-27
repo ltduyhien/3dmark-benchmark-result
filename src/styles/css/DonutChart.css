@@ -11,10 +11,6 @@
   100% {
     opacity: 1; } }
 
-@media (min-width: 992px) {
-  .svg-item {
-    width: 80%; } }
-
 .donut-ring {
   stroke: #EBEBEB; }
 
@@ -31,30 +27,22 @@
   fill: #2BBD77; }
 
 .donut-title {
-  font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", Arial, sans-serif;
   font-size: 0.17rem;
   font-weight: 400;
   line-height: 1;
-  fill: #444444;
-  transform: translateY(0.25em); }
-
-.donut-label {
-  font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
-  font-size: 0.4rem;
-  font-weight: 200;
-  line-height: 1;
-  fill: #000;
-  transform: translateY(0.25em); }
+  fill: #444444; }
 
 .donut-score {
-  font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", Arial, sans-serif;
   font-size: 0.45rem;
   line-height: 1;
   transform: translateY(0.5em);
   font-weight: bold; }
 
 .donut-subtitle {
-  font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", Arial, sans-serif;
+  font-weight: 400;
   font-size: 0.18rem;
   line-height: 1;
   transform: translateY(0.5em);
