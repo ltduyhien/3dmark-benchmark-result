@@ -1,0 +1,22 @@
+[
+  { "item": "Criteria 1", "GPU": "Nvidia RTX 2060", "score": 70 },
+  { "item": "Criteria 1", "GPU": "Nvidia RTX 2080", "score": 30 },
+  { "item": "Criteria 2", "GPU": "Nvidia RTX 2060", "score": 60 },
+  { "item": "Criteria 2", "GPU": "Nvidia RTX 2080", "score": 70 },
+  { "item": "Criteria 3", "GPU": "Nvidia RTX 2060", "score": 50 },
+  { "item": "Criteria 3", "GPU": "Nvidia RTX 2080", "score": 60 },
+  { "item": "Criteria 4", "GPU": "Nvidia RTX 2060", "score": 40 },
+  { "item": "Criteria 4", "GPU": "Nvidia RTX 2080", "score": 50 },
+  { "item": "Criteria 5", "GPU": "Nvidia RTX 2060", "score": 60 },
+  { "item": "Criteria 5", "GPU": "Nvidia RTX 2080", "score": 70 },
+  { "item": "Criteria 6", "GPU": "Nvidia RTX 2060", "score": 70 },
+  { "item": "Criteria 6", "GPU": "Nvidia RTX 2080", "score": 50 },
+  { "item": "Criteria 7", "GPU": "Nvidia RTX 2060", "score": 50 },
+  { "item": "Criteria 7", "GPU": "Nvidia RTX 2080", "score": 40 },
+  { "item": "Criteria 8", "GPU": "Nvidia RTX 2060", "score": 30 },
+  { "item": "Criteria 8", "GPU": "Nvidia RTX 2080", "score": 40 },
+  { "item": "Criteria 9", "GPU": "Nvidia RTX 2060", "score": 60 },
+  { "item": "Criteria 9", "GPU": "Nvidia RTX 2080", "score": 40 },
+  { "item": "Criteria 10", "GPU": "Nvidia RTX 2060", "score": 50 },
+  { "item": "Criteria 10", "GPU": "Nvidia RTX 2080", "score": 60 }
+]

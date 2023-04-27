@@ -6,10 +6,14 @@ import TextBox from './components/TextBox';
 import TextList from './components/TextList';
 import Space from './components/Space';
 import DonutChart from './components/DonutChart';
+import Button from './components/Button';
+
+import LineChart from './components/LineChart';
+import RadarChart from './components/RadarChart';
+
 import data from './test.json';
 import chartData from './chartExample.json';
-import Button from './components/Button';
-import LineChart from './components/LineChart';
+import radarChartData from './radarChartExample.json';
 
 function App() {
   React.useEffect(() => {
@@ -55,6 +59,53 @@ function App() {
     };
   
     return <LineChart config={config} />;
+  };
+
+  const DemoRadar = () => {
+    const [data, setData] = useState(radarChartData);
+  
+    const config = {
+      data,
+      xField: 'item',
+      yField: 'score',
+      seriesField: 'GPU',
+      meta: {
+        score: {
+          alias: '分数',
+          min: 0,
+          max: 80,
+        },
+      },
+      xAxis: {
+        line: null,
+        tickLine: null,
+        grid: {
+          line: {
+            style: {
+              lineDash: null,
+            },
+          },
+        },
+      },
+      yAxis: {
+        line: null,
+        tickLine: null,
+        grid: {
+          line: {
+            type: 'line',
+            style: {
+              lineDash: null,
+            },
+          },
+        },
+      },
+      area: {},
+      point: {
+        size: 2,
+      },
+    };
+  
+    return <RadarChart config={config} />;
   };
 
 /*   const parentRef = React.useRef(null);
@@ -163,9 +214,14 @@ function App() {
           </div>
 
           <div className="flex-grid">
-            <div className="flex-column col-12">
+            <div className="flex-column col-6">
               <Card>
                 <DemoLine />
+              </Card>
+            </div>
+            <div className="flex-column col-6">
+              <Card>
+                <DemoRadar />
               </Card>
             </div>
           </div>
